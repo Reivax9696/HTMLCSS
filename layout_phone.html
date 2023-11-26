@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Layout</title>
+</head>
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+    }
+
+    .wrapper>* {
+        padding: 10px;
+        margin: 10px;
+        flex: 1 100%;
+        border-radius: 10px;
+    }
+
+    .wrapper_window{
+        display: flex;
+        flex-flow:row wrap;
+        text-align: center;
+
+    }
+
+    .header {
+        background: teal;
+        height: 120px;
+    }
+
+    .footer {
+        background: lightgreen;
+        height: 80px;
+    }
+
+    .main {
+        text-align: left;
+        background: deepskyblue;
+        height: 300px;
+        font-size: 22px;
+        display: flex;
+        flex-flow: row;
+    }
+
+    .main-window-left {
+        background: lightcoral;
+        flex: 3; 
+        margin: 10px;
+        display: flex;
+        flex-flow: column;
+        
+    }
+
+    .main-window-right {
+        background: lightblue;
+        flex: 1; 
+        margin: 10px;
+    }
+
+    .window {
+        background: lightcoral;
+        flex: 1;
+        height: 40px;
+        margin: 15px;
+        margin-bottom: -5px;
+        display: flex;
+    }
+
+    .subwindow {
+        background: blue;
+        height: 20px;
+        margin: 8px;
+        flex: 1;
+        margin-top: 10px;
+    }
+
+    .big-subwindow {
+        background: blue;
+        flex: 1;
+        height: 20px;
+        margin: 8px;
+        margin-top: 10px;
+    }
+
+    .subwindow.middle {
+        flex: 2;
+    }
+
+    .small-window {
+        background: blue;
+        flex: 1;       
+        height: 40px; 
+        margin: 20px;
+        margin-top: 40px;
+    }
+
+    .bigger-window {
+        background: blue;
+        flex: 1; 
+        height: 80px; 
+        margin: 20px;
+    }
+
+    .footer-window {
+        background-color: green;
+        flex: 1;
+        height: 40px;
+        margin:20px;
+    }
+
+
+    @media all and (max-width: 600px) {
+        .wrapper {
+            flex-flow: column;
+        }
+
+        .main {
+            flex-flow: column;
+        }
+
+        .main-window-left,
+        .main-window-right {
+            flex: 1;
+            order: 1;
+            margin-top: 20px;
+        }
+
+        .small-window,
+        .bigger-window {
+            flex: 1;
+            margin-top: 20px;
+        }
+
+        .footer {
+            order: 3;
+        }
+
+        .main-window-left,
+        .main-window-right {
+            margin-top: 10px;
+        }
+
+        .small-window,
+        .bigger-window {
+            margin-top: 10px;
+        }
+
+        .main-window-left,
+        .main-window-right,
+        .small-window,
+        .bigger-window,
+        .footer-window {
+            order: 2;
+            margin-top: 10px;
+        }
+        
+    }
+
+</style>
+
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <header class="header">
+                <div class="window">
+                   <div class="subwindow"></div>
+                   <div class="subwindow middle"></div>
+                   <div class="subwindow"></div>
+                </div>
+                <div class="window">
+                    <div class="big-subwindow"></div>
+                </div>
+            </header>
+            <article class="main">
+                <div class="main-window-left">
+                    <div class="wrapper_window">
+                    <div class="small-window"></div>
+                    <div class="small-window"></div>
+                    </div>
+                    <div class="wrapper_window">
+                    <div class="small-window"></div>
+                    <div class="small-window"></div>
+                    </div>
+                    <div class="bigger-window"></div>
+                    
+                </div>
+                <div class="main-window-right">
+                    <div class="small-window"></div>
+                    <div class="small-window"></div>
+                </div>
+            </article>
+            <footer class="footer">
+                <div class="footer-window"></div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
