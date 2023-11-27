@@ -67,7 +67,7 @@
         margin: 10px;
     }
 
-    .window {
+    .header-window {
         background: lightcoral;
         flex: 1;
         height: 40px;
@@ -76,7 +76,7 @@
         display: flex;
     }
 
-    .subwindow {
+    .header-subwindow {
         background: blue;
         height: 20px;
         margin: 8px;
@@ -84,7 +84,7 @@
         margin-top: 10px;
     }
 
-    .big-subwindow {
+    .header-big-subwindow {
         background: blue;
         flex: 1;
         height: 20px;
@@ -92,11 +92,11 @@
         margin-top: 10px;
     }
 
-    .subwindow.middle {
+    .header-subwindow.middle {
         flex: 2;
     }
 
-    .small-window {
+    .main-small-window {
         background: blue;
         flex: 1;       
         height: 40px; 
@@ -104,7 +104,7 @@
         margin-top: 40px;
     }
 
-    .bigger-window {
+    .main-bigger-window {
         background: blue;
         flex: 1; 
         height: 80px; 
@@ -117,7 +117,6 @@
         height: 40px;
         margin:20px;
     }
-
 
     @media all and (min-width: 600px) and (max-width: 800px) {
         .wrapper {
@@ -139,12 +138,12 @@
             margin-top: 20px; 
         }
 
-        .small-window {
+        .main-small-window {
             flex: 1;
             margin-top: 20px;
         }
 
-        .bigger-window {
+        .main-bigger-window {
             flex: 1;
             margin-top: 20px;
         }
@@ -153,49 +152,45 @@
             order: 3;
         }
 
-        
         .main-window-right {
             margin-top: 20px; 
         }
 
-        .small-window,
-        .bigger-window {
-            flex: 1; 
-        }
+        
     }
 
 </style>
-</style>
+
 
 <body>
     <div class="container">
         <div class="wrapper">
             <header class="header">
-                <div class="window">
-                   <div class="subwindow"></div>
-                   <div class="subwindow middle"></div>
-                   <div class="subwindow"></div>
+                <div class="header-window">
+                   <div class="header-subwindow"></div>
+                   <div class="header-subwindow middle"></div>
+                   <div class="header-subwindow"></div>
                 </div>
-                <div class="window">
-                    <div class="big-subwindow"></div>
+                <div class="header-window">
+                    <div class="header-big-subwindow"></div>
                 </div>
             </header>
             <article class="main">
                 <div class="main-window-left">
                     <div class="wrapper_window">
-                    <div class="small-window"></div>
-                    <div class="small-window"></div>
+                    <div class="main-small-window"></div>
+                    <div class="main-small-window"></div>
                     </div>
                     <div class="wrapper_window">
-                    <div class="small-window"></div>
-                    <div class="small-window"></div>
+                    <div class="main-small-window"></div>
+                    <div class="main-small-window"></div>
                     </div>
-                    <div class="bigger-window"></div>
+                    <div class="main-bigger-window"></div>
                     
                 </div>
                 <div class="main-window-right">
-                    <div class="small-window"></div>
-                    <div class="small-window"></div>
+                    <div class="main-small-window"></div>
+                    <div class="main-small-window"></div>
                 </div>
             </article>
             <footer class="footer">
